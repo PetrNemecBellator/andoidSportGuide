@@ -47,7 +47,7 @@ public class Register extends AppCompatActivity{
     * onLoginClick is called after the login button is clicked
     * starting categories activity
     * */
-    public void onLoginClick(View view){
+    public void onRegisterClick(View view){
         Intent categories = new Intent(this, Categories.class);
         startActivity(categories);
     }

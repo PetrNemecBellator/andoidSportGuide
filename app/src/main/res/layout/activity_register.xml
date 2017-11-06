@@ -109,13 +109,13 @@
 
         <Button
             android:layout_width="387dp"
-            android:layout_height="312dp"
-            android:text="@string/register_button"
-            android:textSize="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
             android:background="@drawable/drawable"
             android:onClick="onRegisterClick"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp" />
+            android:text="@string/register_button"
+            android:textSize="70dp" />
     </LinearLayout>
 </RelativeLayout>
 </ScrollView>
