@@ -15,18 +15,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Categories" />
         <activity android:name=".Register" />
         <activity android:name=".Rules" />
-        <activity android:name=".Football" />
-        <activity android:name=".Basketball" />
-        <activity android:name=".VollyBall" />
-        <activity android:name=".Cricket" />
-        <activity android:name=".RUNNING" />
         <activity android:name=".Inspirationpage" />
-        <activity android:name=".Categories" />
         <activity android:name=".Training" />
         <activity android:name=".News" />
         <activity android:name=".Stories" />
+        <activity android:name=".Sports.Football" />
+        <activity android:name=".Sports.Basketball" />
+        <activity android:name=".Sports.VolleyBall" />
+        <activity android:name=".Sports.Cricket" />
+        <activity android:name=".Sports.Running" />
         <activity android:name=".SuccessfulFootballPlayer" />
         <activity android:name=".SuccessfulVolleyballPlayer" />
         <activity android:name=".SuccessfulCricketPlayer" />
