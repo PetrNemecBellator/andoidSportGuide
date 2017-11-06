@@ -12,101 +12,103 @@
     tools:context="com.example.sportguide.Rules"
     android:background="@color/lightgreen">
 
-
     <Button
-        android:text="CRICKET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/voleyballButton"
-        android:layout_alignStart="@+id/voleyballButton"
-        android:layout_marginTop="19dp"
-        android:id="@+id/cricketButton"
-        android:textSize="36sp"
-        android:onClick="onCricketClick" />
-
-    <Button
-        android:text="BASKETBALL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:id="@+id/basketballButton"
-        android:textSize="36sp"
-        android:layout_below="@+id/footballButton"
-        android:layout_alignStart="@+id/footballButton"
-        android:onClick="onBasketballClick" />
-
-    <Button
-        android:text="VOLLEY BALL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:id="@+id/voleyballButton"
-        android:textSize="36sp"
-        android:layout_below="@+id/basketballButton"
-        android:layout_alignStart="@+id/basketballButton"
-        android:onClick="onVolleyballClick" />
-
-    <Button
-        android:text="Football"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
         android:id="@+id/footballButton"
-        android:textSize="36sp"
-        android:onClick="onFootballClick"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:onClick="onFootballClick"
+        android:text="FOOTBALL"
+        android:textSize="30sp" />
 
     <Button
-        android:text="RUNNING"
+        android:id="@+id/basketballButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/footballButton"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@+id/imageViewBasketball"
+        android:onClick="onBasketballClick"
+        android:text="BASKETBALL"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/cricketButton"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_alignStart="@+id/voleyballButton"
+        android:layout_below="@+id/voleyballButton"
+        android:layout_marginTop="22dp"
+        android:onClick="onCricketClick"
+        android:text="CRICKET"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/voleyballButton"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_alignStart="@+id/basketballButton"
+        android:layout_below="@+id/basketballButton"
+        android:layout_marginTop="22dp"
+        android:onClick="onVolleyballClick"
+        android:text="VOLLEY BALL"
+        android:textSize="30sp" />
+
+    <Button
         android:id="@+id/runningButton"
-        android:textSize="36sp"
-        android:onClick="onRunningClick"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_alignStart="@+id/cricketButton"
         android:layout_below="@+id/cricketButton"
-        android:layout_alignStart="@+id/cricketButton" />
+        android:layout_marginTop="22dp"
+        android:onClick="onRunningClick"
+        android:text="RUNNING"
+        android:textSize="30sp" />
 
     <ImageView
-        android:layout_height="58dp"
-        app:srcCompat="@drawable/running"
-        android:id="@+id/imageView5"
-        android:layout_alignTop="@+id/runningButton"
-        android:layout_width="58dp"
-        android:layout_alignBottom="@+id/runningButton"
-        android:layout_toStartOf="@+id/runningButton" />
-
-    <ImageView
-        app:srcCompat="@drawable/football"
-        android:id="@+id/imageView"
-        android:layout_width="58dp"
-        android:layout_height="58dp"
+        android:id="@+id/imageViewFootball"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_alignBottom="@+id/footballButton"
+        android:layout_alignTop="@+id/footballButton"
         android:layout_toStartOf="@+id/footballButton"
-        android:layout_alignTop="@+id/footballButton" />
+        app:srcCompat="@drawable/football" />
 
     <ImageView
-        android:layout_width="58dp"
-        android:layout_height="58dp"
-        app:srcCompat="@drawable/volleyball"
-        android:id="@+id/imageView3"
-        android:layout_alignTop="@+id/voleyballButton"
-        android:layout_alignStart="@+id/imageView2" />
-
-    <ImageView
-        android:layout_width="58dp"
-        android:layout_height="58dp"
-        app:srcCompat="@drawable/cricket"
-        android:id="@+id/imageView4"
-        android:layout_alignTop="@+id/cricketButton"
-        android:layout_alignStart="@+id/imageView3" />
-
-    <ImageView
-        android:layout_width="58dp"
-        android:layout_height="58dp"
-        app:srcCompat="@drawable/basketball"
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewBasketball"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_above="@+id/voleyballButton"
+        android:layout_alignStart="@+id/imageViewFootball"
         android:layout_alignTop="@+id/basketballButton"
-        android:layout_toStartOf="@+id/basketballButton" />
+        app:srcCompat="@drawable/basketball" />
+
+    <ImageView
+        android:id="@+id/imageViewVolleyball"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignBottom="@+id/voleyballButton"
+        android:layout_alignStart="@+id/imageViewBasketball"
+        android:layout_alignTop="@+id/voleyballButton"
+        app:srcCompat="@drawable/volleyball" />
+
+    <ImageView
+        android:id="@+id/imageViewCricket"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignBottom="@+id/cricketButton"
+        android:layout_alignStart="@+id/imageViewVolleyball"
+        android:layout_alignTop="@+id/cricketButton"
+        app:srcCompat="@drawable/cricket" />
+
+    <ImageView
+        android:id="@+id/imageViewRunning"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignBottom="@+id/runningButton"
+        android:layout_alignTop="@+id/runningButton"
+        android:layout_toStartOf="@+id/runningButton"
+        app:srcCompat="@drawable/running" />
 </RelativeLayout>
