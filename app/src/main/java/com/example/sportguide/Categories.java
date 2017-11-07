@@ -46,8 +46,8 @@ public class Categories extends AppCompatActivity {
     }
     // These activities have to be made
 
-    public void onTrainingClick(View view) {
-        Intent intent = new Intent(this, Training.class);
+    public void onPedometerClick(View view) {
+        Intent intent = new Intent(this, de.j4velin.pedometer.ui.Activity_Main.class);
         startActivity(intent);
     }
 
