@@ -24,4 +24,3 @@ public class News extends AppCompatActivity {
         return super.onOptionsItemSelected(menu);
     }
 }
-
