@@ -50,23 +50,24 @@ public class News extends AppCompatActivity {
     private ArticleAdapter mAdapter;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private ProgressBar progressBar;
-    private String urlString = "http://www.espn.com/espn/rss/news";
+    private String urlString = "https://api.foxsports.com/v1/rss";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+//    protected void onCreate() {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.list);
+        mRecyclerView = findViewById(R.id.list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setHasFixedSize(true);
 
-        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.container);
+        mSwipeRefreshLayout = findViewById(R.id.container);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary, R.color.colorPrimaryDark);
         mSwipeRefreshLayout.canChildScrollUp();
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

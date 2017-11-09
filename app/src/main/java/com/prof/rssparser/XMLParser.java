@@ -88,7 +88,7 @@ public class XMLParser extends Observable {
                            currentArticle.setAuthor(author);
                        }
 
-                   } else if (xmlPullParser.getName().equalsIgnoreCase("content:encoded")) {
+                   } else if (xmlPullParser.getName().equalsIgnoreCase("description")) {
 
                        if (insideItem) {
 
