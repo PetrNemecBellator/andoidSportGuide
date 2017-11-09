@@ -15,7 +15,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.sportguide.Sports.Basketball"
-    android:background="@color/lightgreen"
+    android:background="@color/basicblue"
     >
 
     <TextView

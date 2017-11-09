@@ -14,7 +14,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.sportguide.Sports.Football"
-    android:background="@color/lightgreen">
+    android:background="@color/basicblue">
 
     <TextView
         android:text="Football is a international sport which is played all over the world. Teams such as Manchester united and Real Madrid are just some of the most biggest football teams in the world. "

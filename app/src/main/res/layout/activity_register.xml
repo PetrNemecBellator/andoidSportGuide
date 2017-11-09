@@ -16,7 +16,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.sportguide.Register"
-    android:background="@color/lightgreen">
+    android:background="@color/basicblue">
 
     <LinearLayout
         android:layout_width="match_parent"

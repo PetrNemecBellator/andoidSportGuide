@@ -54,4 +54,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BMI.class);
         startActivity(intent);
     }
+
+    public void onRSSClick(View view) {
+        Intent intent = new Intent(this, News.class);
+        startActivity(intent);
+    }
 }
