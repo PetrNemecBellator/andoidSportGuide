@@ -17,4 +17,5 @@
     <color name="darkorange" type="color">#FFFF8800</color>
     <color name="darkred" type="color">#FFCC0000</color>
     <color name="lightgreen" type="color">#33cc33</color>
+    <color name="white" type="color">#ffffff</color>
 </resources>

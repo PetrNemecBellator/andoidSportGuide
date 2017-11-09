@@ -18,6 +18,7 @@
     <string name="categories_title">Categories</string>
     <string name="music">Music</string>
     <string name="stories">Stories of successful sportsmen</string>
+    <string name="bmi_table">Underweight = &lt;18.5\nNormal weight = 18.5–24.9\nOverweight = 25–29.9\nObesity = BMI of 30 or greater</string>
     <string name="password">Password:</string>
     <string name="action_about">About</string>
     <string name="alert_title">Attention!</string>

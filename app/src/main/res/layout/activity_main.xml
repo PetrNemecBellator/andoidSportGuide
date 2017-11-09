@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.sportguide.MainActivity"
     android:background="@color/basicblue">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,8 +18,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp">
 
             <Button
                 android:layout_width="wrap_content"
@@ -28,7 +29,8 @@
                 android:textSize="20dp"
                 android:id="@+id/inspirationButton"
                 android:background="@drawable/categories"
-                android:onClick="onInspirationClick"/>
+                android:onClick="onInspirationClick"
+                android:textColor="@color/white" />
 
             <Button
                 android:layout_width="match_parent"
@@ -39,14 +41,19 @@
                 android:width="160dp"
                 android:textSize="20dp"
                 android:background="@drawable/categories"
-                android:onClick="onPedometerClick" />
+                android:onClick="onPedometerClick"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RSS"
-            android:onClick="onRSSClick"/>
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
+            android:onClick="onRSSClick"
+            android:text="Sport news"
+            android:background="@drawable/categories"
+            android:textColor="@color/white" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -61,7 +68,8 @@
                 android:textSize="20dp"
                 android:height="150dp"
                 android:background="@drawable/categories"
-                android:onClick="onRulesClick" />
+                android:onClick="onRulesClick"
+                android:textColor="@color/white" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -72,7 +80,9 @@
                 android:background="@drawable/categories"
                 android:onClick="onBMIClick"
                 android:text="@string/button_bmi"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:textColor="@color/white" />
+
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

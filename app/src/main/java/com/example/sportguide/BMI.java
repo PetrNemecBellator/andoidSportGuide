@@ -11,8 +11,8 @@ import android.widget.TextView;
 public class BMI extends AppCompatActivity {
     Button calculateButton;
     TextView result;
-    float height = 1;
-    float weight = 0;
+    float height = 1.0f;
+    float weight = 0.0f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -26,21 +26,21 @@ public class BMI extends AppCompatActivity {
                 result = findViewById(R.id.textViewBMI);
                 TextView txtV = findViewById(R.id.heightInput);
                 try {
-                    height = Float.valueOf(txtV.getText().toString());
+                    height = Float.parseFloat(txtV.getText().toString());
                 }
                 catch (Exception e){
                 }
                 txtV = findViewById(R.id.weightInput);
                 try {
-                    weight = Float.valueOf(txtV.getText().toString());
+                    weight = Float.parseFloat(txtV.getText().toString());
                 }
                 catch (Exception e){
                 }
                 if (height < 10) {
-                    result.setText(Float.toString((float) weight/height));
+                    result.setText(Float.toString(weight/(height*height)));
                 }
                 else {
-                    result.setText(Float.toString((float) weight*100/height));
+                    result.setText(Float.toString(weight/((height/100)*(height/100))));
                 }
             }
         });
