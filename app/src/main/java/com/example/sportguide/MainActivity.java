@@ -1,50 +1,57 @@
 package com.example.sportguide;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
-import com.example.sportguide.Categories;
-
-public class MainActivity extends AppCompatActivity{
-
+public class MainActivity extends AppCompatActivity {
     /*
-    * starting method
-    * this is the main method, which is run after the application is started.
-    * Hiding the action bar - the title bar
+    * onCreate method, starting activity categories layout
+    * again adding the backward button in title bar
     * */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Button regButton = (Button) findViewById(R.id.registerButton);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-
-        regButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent register = new Intent(MainActivity.this, Register.class);
-                startActivity(register);
-            }
-        });
+        setContentView(com.example.sportguide.R.layout.activity_main);
     }
+
     /*
-    * onClick method - this method is run after
-     * the register button is clicked on main activity.
-     * Starting new activity - register activity
+    * Same method like in register activity, calls when creates backward button
     * */
-    public void onLoginClick(View view){
-        Intent intent = new Intent(getApplicationContext(), Categories.class);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menu){
+        switch(menu.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(menu);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){return true;}
+
+    public void onInspirationClick(View view){
+        Intent intent = new Intent(getApplicationContext(), Inspirationpage.class);
         startActivity(intent);
     }
 
-    public void regClick(View view) {
-        Intent intent = new Intent(this, Register.class);
+    public void onRulesClick(View view) {
+        Intent intent = new Intent(this, Rules.class);
+        intent.putExtra("flag", "categories");
+        startActivity(intent);
+    }
+    // These activities have to be made
+
+    public void onPedometerClick(View view) {
+        Intent intent = new Intent(this, de.j4velin.pedometer.ui.Activity_Main.class);
+        startActivity(intent);
+    }
+
+    public void onBMIClick(View view) {
+        Intent intent = new Intent(this, BMI.class);
         startActivity(intent);
     }
 }

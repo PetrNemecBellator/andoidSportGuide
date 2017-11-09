@@ -15,12 +15,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <receiver android:name="de.j4velin.pedometer.BootReceiver">
             <intent-filter>
@@ -91,8 +85,13 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".Categories" />
-        <activity android:name=".Register" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BMI" />
         <activity android:name=".Rules" />
         <activity android:name=".Inspirationpage" />
         <activity android:name="de.j4velin.pedometer.ui.Activity_Main" />
