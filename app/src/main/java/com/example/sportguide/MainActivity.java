@@ -7,15 +7,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.sportguide.Sports.Cricket;
+
 public class MainActivity extends AppCompatActivity {
     /*
     * onCreate method, starting activity categories layout
     * again adding the backward button in title bar
     * */
+    Intent firstLogin;
+    static boolean registred = false;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(com.example.sportguide.R.layout.activity_main);
+        setContentView(R.layout.activity_main);
+        if(registred== false) {
+            firstLogin = new Intent(this, ActivityFirstLog.class);
+        startActivity(firstLogin);
+        }
+
     }
 
     /*
@@ -46,8 +55,9 @@ public class MainActivity extends AppCompatActivity {
     // These activities have to be made
 
     public void onPedometerClick(View view) {
-        Intent intent = new Intent(this, de.j4velin.pedometer.ui.Activity_Main.class);
+      Intent intent = new Intent(this, de.j4velin.pedometer.ui.Activity_Main.class);
         startActivity(intent);
+
     }
 
     public void onBMIClick(View view) {
