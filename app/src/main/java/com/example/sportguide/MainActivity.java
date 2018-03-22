@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     * again adding the backward button in title bar
     * */
     Intent firstLogin;
-    static boolean registred = false;
+    private static boolean registred = false;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(firstLogin);
         }
 
+    }
+    public static void setRegistred(boolean valueB){
+        registred =valueB;
     }
 
     /*
